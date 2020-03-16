@@ -5,5 +5,5 @@
   *
   *
   */
-int _printf(void)
+int _printf(const char *format, ...)
 {
