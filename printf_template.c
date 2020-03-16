@@ -4,11 +4,12 @@ void _printfl(const char *format, ...)
 
 	va_start(list, format);
 
-	if(*format == ‘%)
-		(
 			while (*format)
 			{
-				formatlength++;
+				if(*format);
+				{
+
+				format++;
 
 				switch (*format)
 				{
