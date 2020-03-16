@@ -4,14 +4,14 @@
 #include <string.h>
 
 int _printf(char *format,...);
-void _puts_recursion(char *s);
+void _puts(char *str);
 
 int main(void) {
-	printf("Hello %s %s %s World", "new", "new", "code");
+	_printf("Hello %s%s%s World", "new", "new", "code");
 	return 0;
 }
 
-void  printf_new(char *format, ...)
+int  _printf(char *format, ...)
 {
 	char *printer;
 	va_list list;
@@ -27,7 +27,7 @@ void  printf_new(char *format, ...)
 			{
 			case 's':
 				printer = va_arg(list, char *);
-				_puts_recursion(printer);
+				_puts(printer);
 				format++;
 				break;
 
@@ -47,17 +47,14 @@ void  printf_new(char *format, ...)
 	}
 
 	va_end(list);
+	return (0);
 }
-
-void _puts_recursion(char *s)
+void _puts(char *str)
 {
-	if (*s == '\0')
+	int stringcounter;
+
+	for (stringcounter = 0; str[stringcounter] != '\0'; stringcounter++)
 	{
-		putchar('\n');
-	}
-	else
-	{
-		putchar(*s);
-		_puts_recursion(s + 1);
+		putchar(str[stringcounter]);
 	}
 }
