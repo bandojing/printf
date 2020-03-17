@@ -1,3 +1,17 @@
+void _puts_recursion(char *s)
+{
+	if (*s == '\0')
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
+}
+
+
 void _printfl(const char *format, ...)
 {
 	va_list list;
@@ -16,44 +30,44 @@ void _printfl(const char *format, ...)
 
 				case ’s’:
 					stringtoprint = va_arg(list, char*);
-					printstringfunction(stringtoprint, ?);
+					_puts_recurstion(stringtoprint);
 					format++;
 					count characters = count characters + strlen(stringtoprint);
 					break;
 
 
-				case ‘i’:
+					/*case ‘i’:*/
 					/*print integer*/
 
-				case ‘d’:
+				/*case ‘d’:*/
 					/*print integer*/
 
-				case ‘u’:
+					/*case ‘u’:*/
 					/*print unsigned int*/
 
-				case ‘o’:
+					/*case ‘o’:*/
 					/*print unsigned octal*/
 
-				case ‘x’:
+				/*case ‘x’:*/
 					/*print hexadecimal*/
 
-				case ‘X’:
+				/*case ‘X’:*/
 					/*print hexadecimall*/
 
-				case ‘c’:
+					/*case ‘c’:*/
 					/*print char*/
 
-				case ‘p’:
+					/*case ‘p’:*/
 					/*print address*/
-				case ‘%’:
+					/*case ‘%’:*/
 					/*print %*/
 
-				case ‘r’:
+					/*case ‘r’:*/
 					/*print r*/
 
 
-				case ‘\0’:
-					break;
+					/*case ‘\0’:*/
+					  /*break;*/
 				default:
 					_putchar(‘%’);
 					_putchar(*format);
@@ -65,9 +79,9 @@ void _printfl(const char *format, ...)
 		{
 			_putchar(*format);
 			format++;
-			count characters++;
+			/*count characters++;*/
 		}
 			}
 			va_end(list);
 
-	return (character count);
+/*	return (character count);*/
