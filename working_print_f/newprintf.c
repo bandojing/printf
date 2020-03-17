@@ -5,8 +5,13 @@
 
 int  _printf(char *format, ...);
 void _puts(char *str);
+int _print_int(va_list ls);
 
-
+int main(void)
+{
+	_printf("%s %% %c ", "hello everybody", 'X');
+	return (0);
+}
 /**
  * _printf - variatic function that prints strings characters and %
  * @format: character pointer to a formatted string
