@@ -6,8 +6,6 @@ int  _printf(char *format, ...)
 
         while(*format)
         {
-                if(*format = '\\')
-                {
 
                         if(*format == '%')
                         {
@@ -19,6 +17,11 @@ int  _printf(char *format, ...)
 						 _puts(printer);
 						 format++;
 						 break;
+				case 'c':
+					printer = va_arg(list, char);
+					putchar(printer);
+					break;
+
 					case 'd':
 						 printer = va_arg(list, int);
 						 /*function to print integer*/
@@ -31,7 +34,7 @@ int  _printf(char *format, ...)
 						 break;
 					case '%':
 						 printer = va_arg(list, char)
-						 putchar(printer);
+						 putchar(37);
 						 format++;
 						 break;
 				}
