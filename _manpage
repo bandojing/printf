@@ -1,0 +1,17 @@
+.\" Manpage for _printf.
+.\" Created by Bryant Davis and Victor Rivera
+.TH man 8 "17 March 2020" "1.0" "_printf man page"
+.SH NAME
+_printf \- Victor Rivera, Bryant Davis
+.SH SYNOPSIS
+_printf
+.SH DESCRIPTION
+_printf is a function written in c programming to format and print the input given by the user. It takes integers, characters, strings, etc.
+.SH OPTIONS
+_printf takes Format Specifiers which are: %s for strings; %c for a single character; %d and %i for integers
+.SH SEE ALSO
+README.md file located on _printf repository on https://github.com/bandojing/printf and Flowchart also on Github
+.SH BUGS
+None thus far
+.SH AUTHOR
+Victor Rivera
