@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdalib.h>
-#include <string.h>
-
-int  _printf(char *format, ...);
-void _puts(char *str);
-
+#include "holberton.h"
 
 /**
  * _printf - variatic function that prints strings characters and %
@@ -18,7 +11,6 @@ void _puts(char *str);
 */
 int  _printf(char *format, ...)
 {
-	int PrintInteger;
 	char *printer;
 	va_list list;
 	char chara;
@@ -37,31 +29,24 @@ int  _printf(char *format, ...)
 				_puts(printer);
 				format++;
 				break;
-
 			case 'c':
 				chara = va_arg(list, int);
 				putchar(chara);
 				format++;
 				break;
-
 			case '%':
 				putchar('%');
 				format++;
 				break;
 			case '\0':
 				break;
-			default:
-				putchar(*format);
-				format++;
 			}
 		}
 		else
-			putchar(*format);
+		putchar(*format);
 		format++;
 	}
-
 	va_end(list);
-
 	return (0);
 }
 /**
