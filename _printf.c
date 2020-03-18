@@ -11,7 +11,6 @@
 */
 int  _printf(char *format, ...)
 {
-	int num;
 	char *printer;
 	va_list list;
 	char chara;
@@ -35,12 +34,6 @@ int  _printf(char *format, ...)
 				putchar(chara);
 				format++;
 				break;
-			case 'd':
-				num = va_arg(list, int);
-				_puts(num);
-				format++;
-				break;
-
 			case '%':
 				putchar('%');
 				format++;
