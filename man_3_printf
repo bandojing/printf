@@ -12,6 +12,6 @@ _printf takes Format Specifiers which are: %s for strings; %c for a single chara
 .SH SEE ALSO
 README.md file located on _printf repository on https://github.com/bandojing/printf and Flowchart also on Github
 .SH BUGS
-None thus far
+Our program compiles, however it cannot print integers and other types of data due to the funciton being able to print strings at the moment
 .SH AUTHOR
 Victor Rivera
